@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placements - BuildX Tech Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">Build<span class="logo-x">X</span></span>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span class="hamburger"></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="courses.html" class="nav-link">Courses</a></li>
+                <li><a href="certifications.html" class="nav-link">Certifications</a></li>
+                <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                <li><a href="placements.html" class="nav-link">Placements</a></li>
+            </ul>
+            <button class="enroll-btn" onclick="openEnrollModal()">Enroll Now</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="service-hero"
+        style="background-image: url('images/team-collaboration.jpg'); background-size: cover; background-position: center;">
+        <div class="hero-overlay"></div>
+        <div class="hero-content animate-fade-in-up">
+            <h1 class="hero-title">Your Career Starts <span class="accent-text">Here</span></h1>
+            <p class="hero-description">95% placement rate with top tech companies</p>
+        </div>
+    </section>
+
+    <!-- Stats Section --
+    <section
+        style="padding: 80px 20px; background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(168, 85, 247, 0.05) 100%);">
+        <div class="container">
+            <div class="stats-grid stagger-children"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center;">
+                <div class="stat-card animate-scale-in">
+                    <div class="stat-number">5000+</div>
+                    <p class="stat-label">Placements Done</p>
+                </div>
+                <div class="stat-card animate-scale-in">
+                    <div class="stat-number">₹ 8.5 LPA</div>
+                    <p class="stat-label">Average CTC</p>
+                </div>
+                <div class="stat-card animate-scale-in">
+                    <div class="stat-number">95%</div>
+                    <p class="stat-label">Placement Rate</p>
+                </div>
+                <div class="stat-card animate-scale-in">
+                    <div class="stat-number">300+</div>
+                    <p class="stat-label">Partner Companies</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Goal Setting Section -->
+    <section
+        style="padding: 80px 20px; background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(168, 85, 247, 0.05) 100%);">
+        <div class="container">
+            <div class="section-header animate-fade-in-up">
+                <h2>Set Your <span class="accent-text">Career Goals</span></h2>
+                <p>Choose your dream company and we'll guide you every step of the way</p>
+            </div>
+
+            <div
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-top: 50px; flex-wrap: wrap;">
+                <div class="animate-fade-in-left">
+                    <img src="images/career-goals.jpg" alt="Career Goals"
+                        style="width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(6, 182, 212, 0.2);">
+                </div>
+                <div class="animate-fade-in-right">
+                    <h3 style="font-size: 2rem; margin-bottom: 1.5rem;">Your Dream Role Awaits</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.7;">We understand that
+                        every student has unique career aspirations. Whether you dream of working at a fast-growing SaaS
+                        startup or leading digital transformation at an established tech company, we prepare you
+                        specifically for your goals.</p>
+
+                    <div
+                        style="background: var(--card-bg); border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                        <h4 style="color: var(--primary-color); margin-bottom: 1rem;">How We Help:</h4>
+                        <ul style="list-style: none; color: var(--text-secondary);">
+                            <li style="padding: 0.75rem 0; padding-left: 1.5rem; position: relative;">
+                                <span
+                                    style="position: absolute; left: 0; color: var(--primary-color); font-weight: bold;">✓</span>
+                                <strong>Goal Assessment</strong> - Define your target companies and roles
+                            </li>
+                            <li style="padding: 0.75rem 0; padding-left: 1.5rem; position: relative;">
+                                <span
+                                    style="position: absolute; left: 0; color: var(--primary-color); font-weight: bold;">✓</span>
+                                <strong>Personalized Roadmap</strong> - Customized learning path for your goals
+                            </li>
+                            <li style="padding: 0.75rem 0; padding-left: 1.5rem; position: relative;">
+                                <span
+                                    style="position: absolute; left: 0; color: var(--primary-color); font-weight: bold;">✓</span>
+                                <strong>Mentor Guidance</strong> - 1-on-1 sessions with professionals from your target
+                                companies
+                            </li>
+                            <li style="padding: 0.75rem 0; padding-left: 1.5rem; position: relative;">
+                                <span
+                                    style="position: absolute; left: 0; color: var(--primary-color); font-weight: bold;">✓</span>
+                                <strong>Company-Specific Prep</strong> - Technical and cultural interview training
+                            </li>
+                            <li style="padding: 0.75rem 0; padding-left: 1.5rem; position: relative;">
+                                <span
+                                    style="position: absolute; left: 0; color: var(--primary-color); font-weight: bold;">✓</span>
+                                <strong>Direct Referrals</strong> - Priority placements at partner companies
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button class="btn btn-primary" onclick="openEnrollModal()">Start Your Journey</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SaaS & SEO Focus Section -->
+    <section style="padding: 80px 20px;">
+        <div class="container">
+            <div class="section-header animate-fade-in-up">
+                <h2>SaaS & <span class="accent-text">SEO Specialization</span></h2>
+                <p>Our core expertise in high-growth technology sectors</p>
+            </div>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px;">
+                <!-- SaaS Card -->
+                <div class="service-card lift-on-hover animate-fade-in-up">
+                    <img src="images/saas-product.jpg" alt="SaaS Products"
+                        style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
+                    <h3>SaaS Product Development</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Master cloud-based software
+                        development with expertise in subscription models, multi-tenancy architecture, and scalable
+                        infrastructure.</p>
+                    <div class="service-features" style="margin-bottom: 1rem;">
+                        <span class="feature-badge">Full Stack</span>
+                        <span class="feature-badge">Cloud Native</span>
+                        <span class="feature-badge">Microservices</span>
+                    </div>
+                    <h4 style="font-size: 1rem; color: var(--primary-color); margin-bottom: 0.5rem;">Key Skills:</h4>
+                    <ul style="list-style: none; color: var(--text-secondary); font-size: 0.9rem;">
+                        <li>✓ Stripe Integration & Payments</li>
+                        <li>✓ User Authentication & Authorization</li>
+                        <li>✓ Database Optimization & Scaling</li>
+                        <li>✓ API Design & Documentation</li>
+                        <li>✓ DevOps & Deployment</li>
+                    </ul>
+                    <p style="margin-top: 1.5rem; font-weight: 600; color: var(--primary-color);">50+ SaaS Companies
+                        Hiring</p>
+                </div>
+
+                <!-- SEO Card -->
+                <div class="service-card lift-on-hover animate-fade-in-up">
+                    <img src="images/seo-optimization.jpg" alt="SEO Optimization"
+                        style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
+                    <h3>Digital Marketing & SEO</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Learn cutting-edge SEO techniques,
+                        content strategy, and performance marketing to drive growth for high-potential startups and
+                        established brands.</p>
+                    <div class="service-features" style="margin-bottom: 1rem;">
+                        <span class="feature-badge">Technical SEO</span>
+                        <span class="feature-badge">Content Strategy</span>
+                        <span class="feature-badge">Analytics</span>
+                    </div>
+                    <h4 style="font-size: 1rem; color: var(--primary-color); margin-bottom: 0.5rem;">Key Skills:</h4>
+                    <ul style="list-style: none; color: var(--text-secondary); font-size: 0.9rem;">
+                        <li>✓ Keyword Research & Analysis</li>
+                        <li>✓ On-Page & Off-Page SEO</li>
+                        <li>✓ Content Marketing Strategy</li>
+                        <li>✓ Google Analytics & GSC</li>
+                        <li>✓ Performance Tracking</li>
+                    </ul>
+                    <p style="margin-top: 1.5rem; font-weight: 600; color: var(--primary-color);">30+ Growth Marketing
+                        Roles</p>
+                </div>
+
+                <!-- SaaS Career Card -->
+                <div class="service-card lift-on-hover animate-fade-in-up">
+                    <img src="images/startup-culture.jpg" alt="Startup Culture"
+                        style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;">
+                    <h3>Startup Ecosystem Mastery</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Understand fast-paced SaaS startup
+                        culture, product-market fit, user acquisition strategies, and rapid scaling methodologies.</p>
+                    <div class="service-features" style="margin-bottom: 1rem;">
+                        <span class="feature-badge">Product</span>
+                        <span class="feature-badge">Growth</span>
+                        <span class="feature-badge">Scaling</span>
+                    </div>
+                    <h4 style="font-size: 1rem; color: var(--primary-color); margin-bottom: 0.5rem;">Key Skills:</h4>
+                    <ul style="list-style: none; color: var(--text-secondary); font-size: 0.9rem;">
+                        <li>✓ Product Strategy & Roadmap</li>
+                        <li>✓ Customer Success & Retention</li>
+                        <li>✓ Data-Driven Decisions</li>
+                        <li>✓ Agile Methodology</li>
+                        <li>✓ Team Leadership</li>
+                    </ul>
+                    <p style="margin-top: 1.5rem; font-weight: 600; color: var(--primary-color);">25+ Product Manager
+                        Roles</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="section" style="padding: 80px 20px;">
+        <div class="container">
+            <div class="section-header animate-fade-in-up">
+                <h2>Student Success <span class="accent-text">Stories</span></h2>
+                <p>Real stories from our placed students</p>
+            </div>
+
+            <div class="testimonials-grid stagger-children"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 30px; margin-top: 50px;">
+                <!-- Testimonial 1 - SaaS -->
+                <div class="testimonial-card lift-on-hover">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">RK</div>
+                        <div class="testimonial-info">
+                            <h4>Rahul Kapoor</h4>
+                            <p class="role">Senior SaaS Developer at Freshworks</p>
+                            <p class="company-badge">₹ 22 LPA</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-content">"I set a goal to work at a SaaS company after taking BuildX's Full
+                        Stack course. The personalized mentorship from SaaS experts prepared me perfectly. I'm now
+                        building features used by millions!"</p>
+                    <div class="testimonial-meta">
+                        <span class="course-tag">SaaS Development</span>
+                        <span class="placement-time">Placed in 2 months</span>
+                    </div>
+                    <div class="rating">⭐ 5/5</div>
+                </div>
+
+                <!-- Testimonial 2 - SEO -->
+                <div class="testimonial-card lift-on-hover">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">PS</div>
+                        <div class="testimonial-info">
+                            <h4>Priya Singh</h4>
+                            <p class="role">Growth Marketer at HubSpot</p>
+                            <p class="company-badge">₹ 16 LPA</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-content">"I knew I wanted to work in SEO and growth marketing. BuildX's SEO
+                        specialization program was exactly what I needed. Now I'm driving organic growth for a leading
+                        SaaS company!"</p>
+                    <div class="testimonial-meta">
+                        <span class="course-tag">Digital Marketing & SEO</span>
+                        <span class="placement-time">Placed in 3 months</span>
+                    </div>
+                    <div class="rating">⭐ 4.9/5</div>
+                </div>
+
+                <!-- Testimonial 3 - SaaS Product -->
+                <div class="testimonial-card lift-on-hover">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">AJ</div>
+                        <div class="testimonial-info">
+                            <h4>Aman Joshi</h4>
+                            <p class="role">Product Manager at Razorpay</p>
+                            <p class="company-badge">₹ 19 LPA</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-content">"My goal was to join a hyper-growth SaaS startup. BuildX helped me
+                        understand product strategy and startup culture. Now I'm defining product roadmaps for a
+                        unicorn!"</p>
+                    <div class="testimonial-meta">
+                        <span class="course-tag">SaaS Product Strategy</span>
+                        <span class="placement-time">Placed in 2 months</span>
+                    </div>
+                    <div class="rating">⭐ 5/5</div>
+                </div>
+
+                <!-- Testimonial 4 - SaaS Backend -->
+                <div class="testimonial-card lift-on-hover">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">NN</div>
+                        <div class="testimonial-info">
+                            <h4>Nikhil Nair</h4>
+                            <p class="role">Backend Engineer at Stripe</p>
+                            <p class="company-badge">₹ 24 LPA</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-content">"BuildX's SaaS development path was perfect for my goals. Learning
+                        payment integrations, microservices, and scalability directly helped me land at Stripe. Best
+                        decision ever!"</p>
+                    <div class="testimonial-meta">
+                        <span class="course-tag">SaaS Backend</span>
+                        <span class="placement-time">Placed in 2 months</span>
+                    </div>
+                    <div class="rating">⭐ 5/5</div>
+                </div>
+
+                <!-- Testimonial 5 - SEO Specialist -->
+                <div class="testimonial-card lift-on-hover">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">VK</div>
+                        <div class="testimonial-info">
+                            <h4>Vidhya Kashyap</h4>
+                            <p class="role">Content & SEO Lead at Semrush</p>
+                            <p class="company-badge">₹ 14 LPA</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-content">"I wanted to specialize in SEO and content strategy. BuildX's
+                        comprehensive training with real client projects gave me the portfolio I needed. Now I'm helping
+                        global brands rank!"</p>
+                    <div class="testimonial-meta">
+                        <span class="course-tag">SEO & Content</span>
+                        <span class="placement-time">Placed in 3 months</span>
+                    </div>
+                    <div class="rating">⭐ 4.9/5</div>
+                </div>
+
+                <!-- Testimonial 6 - SaaS Full Stack -->
+                <div class="testimonial-card lift-on-hover">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">SM</div>
+                        <div class="testimonial-info">
+                            <h4>Sneha Mehta</h4>
+                            <p class="role">Full Stack Engineer at Intercom</p>
+                            <p class="company-badge">₹ 20 LPA</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-content">"My career goal was to build products that impact millions. BuildX's
+                        SaaS specialization program gave me the exact skills needed. Now I'm shipping features for a
+                        global SaaS platform!"</p>
+                    <div class="testimonial-meta">
+                        <span class="course-tag">Full Stack SaaS</span>
+                        <span class="placement-time">Placed in 2 months</span>
+                    </div>
+                    <div class="rating">⭐ 5/5</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hiring Companies --
+    <section
+        style="padding: 80px 20px; background: linear-gradient(135deg, rgba(6, 182, 212, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);">
+        <div class="container">
+            <div class="section-header animate-fade-in-up">
+                <h2>Our Hiring <span class="accent-text">Partners</span></h2>
+                <p>Trusted by Fortune 500, SaaS leaders, and innovative startups</p>
+            </div>
+
+            <div style="margin-top: 30px; text-align: center; margin-bottom: 2rem;">
+                <h4 style="color: var(--text-secondary); margin-bottom: 1rem;">SaaS & Growth Companies</h4>
+            </div>
+
+            <div class="companies-grid stagger-children"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 50px;">
+                <div class="company-card lift-on-hover">
+                    <div class="company-logo">💳 Stripe</div>
+                    <p>120+ Placements</p>
+                </div>
+                <div class="company-card lift-on-hover">
+                    <div class="company-logo">🎯 HubSpot</div>
+                    <p>85+ Placements</p>
+                </div>
+                <div class="company-card lift-on-hover">
+                    <div class="company-logo">💬 Intercom</div>
+                    <p>65+ Placements</p>
+                </div>
+                <div class="company-card lift-on-hover">
+                    <div class="company-logo">🔐 Auth0</div>
+                    <p>50+ Placements</p>
+                </div>
+                <div class="company-card lift-on-hover">
+                    <div class="company-logo">📊 Semrush</div>
+                    <p>75+ Placements</p>
+                </div>
+                <div class="company-card lift-on-hover">
+                    <div class="company-logo">✉️ Freshworks</div>
+                    <p>95+ Placements</p>
+                </div>
+                <div class="company-card lift-on-hover">
+                    <div class="company-logo">💰 Razorpay</div>
+                    <p>110+ Placements</p>
+                </div>
+                <div class="company-card lift-on-hover">
+                    <div class="company-logo">📱 Notion</div>
+                    <p>60+ Placements</p>
+                </div>
+                <div class="company-card lift-on-hover">
+                    <div class="company-logo">🚀 Figma</div>
+                    <p>55+ Placements</p>
+                </div>
+                <div class="company-card lift-on-hover">
+                    <div class="company-logo">🌐 Airtable</div>
+                    <p>45+ Placements</p>
+                </div>
+                <div class="company-card lift-on-hover">
+                    <div class="company-logo">📈 Mixpanel</div>
+                    <p>40+ Placements</p>
+                </div>
+                <div class="company-card lift-on-hover">
+                    <div class="company-logo">🔍 Algolia</div>
+                    <p>35+ Placements</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 50px; text-align: center; margin-bottom: 2rem;">
+                <h4 style="color: var(--text-secondary); margin-bottom: 1rem;">Global Tech Leaders</h4>
+            </div>
+
+            <div class="companies-grid stagger-children"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px;">
+                <div class="company-card lift-on-hover">
+                    <div class="company-logo">🔵 Google</div>
+                    <p>500+ Placements</p>
+                </div>
+                <div class="company-card lift-on-hover">
+                    <div class="company-logo">🔷 Microsoft</div>
+                    <p>350+ Placements</p>
+                </div>
+                <div class="company-card lift-on-hover">
+                    <div class="company-logo">🟠 Amazon</div>
+                    <p>400+ Placements</p>
+                </div>
+                <div class="company-card lift-on-hover">
+                    <div class="company-logo">💜 Flipkart</div>
+                    <p>300+ Placements</p>
+                </div>
+                <div class="company-card lift-on-hover">
+                    <div class="company-logo">🔴 Meta</div>
+                    <p>250+ Placements</p>
+                </div>
+                <div class="company-card lift-on-hover">
+                    <div class="company-logo">🟦 IBM</div>
+                    <p>280+ Placements</p>
+                </div>
+                <div class="company-card lift-on-hover">
+                    <div class="company-logo">🟢 Accenture</div>
+                    <p>320+ Placements</p>
+                </div>
+                <div class="company-card lift-on-hover">
+                    <div class="company-logo">🔵 Apple</div>
+                    <p>180+ Placements</p>
+                </div>
+                <div class="company-card lift-on-hover">
+                    <div class="company-logo">🟡 Goldman Sachs</div>
+                    <p>220+ Placements</p>
+                </div>
+                <div class="company-card lift-on-hover">
+                    <div class="company-logo">🟣 Spotify</div>
+                    <p>150+ Placements</p>
+                </div>
+                <div class="company-card lift-on-hover">
+                    <div class="company-logo">🟠 JPMorgan</div>
+                    <p>280+ Placements</p>
+                </div>
+                <div class="company-card lift-on-hover">
+                    <div class="company-logo">🔷 Deloitte</div>
+                    <p>310+ Placements</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Placement Process -->
+    <section class="section" style="padding: 80px 20px;">
+        <div class="container">
+            <div class="section-header animate-fade-in-up">
+                <h2>Our Placement <span class="accent-text">Process</span></h2>
+                <p>From skill-building to employment in 6 months</p>
+            </div>
+
+            <div class="process-timeline stagger-children"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 50px;">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <h4>Skill Development</h4>
+                    <p>Learn from industry experts with hands-on projects and real-world applications.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <h4>Portfolio Building</h4>
+                    <p>Create impressive projects and build your GitHub portfolio with real applications.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <h4>Interview Prep</h4>
+                    <p>Mock interviews, coding challenges, and HR prep with experienced professionals.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <h4>Company Placement</h4>
+                    <p>Direct referrals to partner companies with interview coordination and support.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">05</div>
+                    <h4>Offer Negotiation</h4>
+                    <p>Expert guidance on salary negotiation and offer evaluation.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">06</div>
+                    <h4>Career Support</h4>
+                    <p>Lifetime support for career growth and professional development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Openings (Disabled for now)
+    <section
+        style="padding: 80px 20px; background: linear-gradient(135deg, rgba(6, 182, 212, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);">
+        <div class="container">
+            <div class="section-header animate-fade-in-up">
+                <h2>Current Job <span class="accent-text">Openings</span></h2>
+                <p>Fresh opportunities for our graduates</p>
+            </div>
+
+            <div class="jobs-grid stagger-children"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px;">
+                <div class="job-card lift-on-hover">
+                    <div class="job-header">
+                        <h4>SaaS Full Stack Engineer</h4>
+                        <span class="job-company">Stripe</span>
+                    </div>
+                    <p class="job-details">
+                        <strong>Location:</strong> Remote | <strong>CTC:</strong> ₹ 20-25 LPA
+                    </p>
+                    <p class="job-description">Build payment processing features for millions of businesses. Work with
+                        scalable SaaS architecture and microservices.</p>
+                    <div class="job-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">SaaS</span>
+                    </div>
+                    <button class="btn btn-outline" style="width: 100%; margin-top: 15px;">Apply Now</button>
+                </div>
+
+                <div class="job-card lift-on-hover">
+                    <div class="job-header">
+                        <h4>Content & SEO Specialist</h4>
+                        <span class="job-company">HubSpot</span>
+                    </div>
+                    <p class="job-details">
+                        <strong>Location:</strong> Bangalore | <strong>CTC:</strong> ₹ 12-16 LPA
+                    </p>
+                    <p class="job-description">Drive organic growth for HubSpot's content marketing platform. Optimize
+                        content for search, build backlink strategies, and manage SEO metrics.</p>
+                    <div class="job-tags">
+                        <span class="tag">SEO</span>
+                        <span class="tag">Content Strategy</span>
+                        <span class="tag">Analytics</span>
+                        <span class="tag">Growth</span>
+                    </div>
+                    <button class="btn btn-outline" style="width: 100%; margin-top: 15px;">Apply Now</button>
+                </div>
+
+                <div class="job-card lift-on-hover">
+                    <div class="job-header">
+                        <h4>Backend Engineer - SaaS Platform</h4>
+                        <span class="job-company">Razorpay</span>
+                    </div>
+                    <p class="job-details">
+                        <strong>Location:</strong> Bangalore | <strong>CTC:</strong> ₹ 18-22 LPA
+                    </p>
+                    <p class="job-description">Build high-performance APIs and backend systems for fintech SaaS. Handle
+                        millions of transactions with reliability and security.</p>
+                    <div class="job-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Microservices</span>
+                        <span class="tag">Redis</span>
+                        <span class="tag">Payment Systems</span>
+                    </div>
+                    <button class="btn btn-outline" style="width: 100%; margin-top: 15px;">Apply Now</button>
+                </div>
+
+                <div class="job-card lift-on-hover">
+                    <div class="job-header">
+                        <h4>Frontend Developer - SaaS</h4>
+                        <span class="job-company">Freshworks</span>
+                    </div>
+                    <p class="job-details">
+                        <strong>Location:</strong> Chennai | <strong>CTC:</strong> ₹ 16-20 LPA
+                    </p>
+                    <p class="job-description">Build beautiful, responsive UIs for a leading SaaS platform. Work with
+                        React, TypeScript, and modern frontend frameworks.</p>
+                    <div class="job-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">Material UI</span>
+                        <span class="tag">SaaS</span>
+                    </div>
+                    <button class="btn btn-outline" style="width: 100%; margin-top: 15px;">Apply Now</button>
+                </div>
+
+                <div class="job-card lift-on-hover">
+                    <div class="job-header">
+                        <h4>Growth & SEO Manager</h4>
+                        <span class="job-company">Semrush</span>
+                    </div>
+                    <p class="job-details">
+                        <strong>Location:</strong> Remote | <strong>CTC:</strong> ₹ 14-18 LPA
+                    </p>
+                    <p class="job-description">Lead SEO and content strategy initiatives for a global SaaS platform.
+                        Manage campaigns, analyze metrics, and drive organic growth.</p>
+                    <div class="job-tags">
+                        <span class="tag">SEO</span>
+                        <span class="tag">Growth Hacking</span>
+                        <span class="tag">Analytics</span>
+                        <span class="tag">Marketing</span>
+                    </div>
+                    <button class="btn btn-outline" style="width: 100%; margin-top: 15px;">Apply Now</button>
+                </div>
+
+                <div class="job-card lift-on-hover">
+                    <div class="job-header">
+                        <h4>Product Manager - SaaS</h4>
+                        <span class="job-company">Intercom</span>
+                    </div>
+                    <p class="job-details">
+                        <strong>Location:</strong> Dublin (Remote OK) | <strong>CTC:</strong> ₹ 19-25 LPA
+                    </p>
+                    <p class="job-description">Define product strategy and roadmap for communication SaaS. Work with
+                        engineering and design to deliver customer value.</p>
+                    <div class="job-tags">
+                        <span class="tag">Product Strategy</span>
+                        <span class="tag">SaaS</span>
+                        <span class="tag">Analytics</span>
+                        <span class="tag">User Research</span>
+                    </div>
+                    <button class="btn btn-outline" style="width: 100%; margin-top: 15px;">Apply Now</button>
+                </div>
+
+                <div class="job-card lift-on-hover">
+                    <div class="job-header">
+                        <h4>DevOps & Infrastructure Engineer</h4>
+                        <span class="job-company">Google Cloud</span>
+                    </div>
+                    <p class="job-details">
+                        <strong>Location:</strong> Bangalore | <strong>CTC:</strong> ₹ 15-19 LPA
+                    </p>
+                    <p class="job-description">Build and maintain scalable cloud infrastructure for SaaS platforms. Work
+                        with Kubernetes, Docker, and modern DevOps tools.</p>
+                    <div class="job-tags">
+                        <span class="tag">Kubernetes</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">GCP</span>
+                        <span class="tag">CI/CD</span>
+                    </div>
+                    <button class="btn btn-outline" style="width: 100%; margin-top: 15px;">Apply Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    -->
+
+    <!-- CTA Section -->
+    <section class="cta-section"
+        style="padding: 80px 20px; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; text-align: center;">
+        <div class="container animate-fade-in-up">
+            <h2>Ready to Land Your Dream Job?</h2>
+            <p style="font-size: 18px; margin: 20px 0; opacity: 0.9;">Start your journey towards a successful tech
+                career today</p>
+            <button class="btn"
+                style="background: white; color: var(--primary-color); font-weight: 600; padding: 12px 40px; font-size: 16px;"
+                onclick="scrollToTop()">Join Our Program</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3 class="footer-title">BuildX</h3>
+                <p class="footer-desc">Transforming careers through skill-based training and placements.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="certifications.html">Certifications</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" class="social-icon">f</a>
+                    <a href="#" class="social-icon">i</a>
+                    <a href="#" class="social-icon">l</a>
+                    <a href="#" class="social-icon">w</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BuildX Tech Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

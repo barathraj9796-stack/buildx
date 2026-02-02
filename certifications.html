@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications - BuildX Tech Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">Build<span class="logo-x">X</span></span>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span class="hamburger"></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="courses.html" class="nav-link">Courses</a></li>
+                <li><a href="certifications.html" class="nav-link">Certifications</a></li>
+                <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                <li><a href="placements.html" class="nav-link">Placements</a></li>
+            </ul>
+            <button class="enroll-btn" onclick="openEnrollModal()">Enroll Now</button>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="service-hero"
+        style="background-image: url('images/hero-bg.jpg'); background-size: cover; background-position: center;">
+        <div class="hero-overlay"></div>
+        <div class="hero-content animate-fade-in-up">
+            <h1 class="hero-title">Global <span class="accent-text">Certifications</span></h1>
+            <p class="hero-description">Earn recognized certifications from industry leaders</p>
+        </div>
+    </section>
+
+    <!-- Certifications Grid -->
+    <section class="section" style="padding: 80px 20px;">
+        <div class="container">
+            <div class="section-header animate-fade-in-up">
+                <h2>Industry-Recognized Certifications</h2>
+                <p>Advance your career with globally respected credentials</p>
+            </div>
+
+            <div class="certifications-grid stagger-children"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px;">
+                <!-- JPMorgan -->
+                <div class="cert-card lift-on-hover">
+                    <div class="cert-logo-container" style="background: linear-gradient(135deg, #1e3a8a, #1e40af);">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="white">
+                            <path
+                                d="M20 18h8v4h-8z M20 24h8v4h-8z M20 30h8v4h-8z M32 18h8v4h-8z M32 24h8v4h-8z M32 30h8v4h-8z" />
+                        </svg>
+                    </div>
+                    <h3>JPMorgan Software Engineering</h3>
+                    <p class="cert-description">Professional certification in modern software engineering practices used
+                        at JPMorgan Chase.</p>
+                    <div class="cert-benefits">
+                        <span class="benefit-tag">4 Weeks Duration</span>
+                        <span class="benefit-tag">Intermediate Level</span>
+                        <span class="benefit-tag">Peer Review</span>
+                    </div>
+                    <div class="cert-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">12K+</span>
+                            <span class="stat-name">Certified</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">95%</span>
+                            <span class="stat-name">Satisfaction</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline" style="width: 100%; margin-top: 20px;">Learn More →</button>
+                </div>
+
+                <!-- Google Analytics -->
+                <div class="cert-card lift-on-hover">
+                    <div class="cert-logo-container" style="background: linear-gradient(135deg, #4f46e5, #6366f1);">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="white">
+                            <circle cx="30" cy="30" r="15" fill="white" opacity="0.3" />
+                            <circle cx="30" cy="30" r="8" fill="white" />
+                        </svg>
+                    </div>
+                    <h3>Google Analytics Certification</h3>
+                    <p class="cert-description">Master web analytics and data-driven decision making with Google
+                        Analytics 4.</p>
+                    <div class="cert-benefits">
+                        <span class="benefit-tag">3 Weeks Duration</span>
+                        <span class="benefit-tag">Beginner Level</span>
+                        <span class="benefit-tag">Hands-on Labs</span>
+                    </div>
+                    <div class="cert-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">45K+</span>
+                            <span class="stat-name">Certified</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">98%</span>
+                            <span class="stat-name">Satisfaction</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline" style="width: 100%; margin-top: 20px;">Learn More →</button>
+                </div>
+
+                <!-- Microsoft Azure -->
+                <div class="cert-card lift-on-hover">
+                    <div class="cert-logo-container" style="background: linear-gradient(135deg, #0ea5e9, #06b6d4);">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="white">
+                            <rect x="20" y="18" width="8" height="8" />
+                            <rect x="32" y="18" width="8" height="8" />
+                            <rect x="20" y="30" width="8" height="8" />
+                            <rect x="32" y="30" width="8" height="8" />
+                            <rect x="20" y="42" width="8" height="8" />
+                            <rect x="32" y="42" width="8" height="8" />
+                        </svg>
+                    </div>
+                    <h3>Microsoft Azure Fundamentals</h3>
+                    <p class="cert-description">Comprehensive cloud certification for Azure services and cloud
+                        infrastructure management.</p>
+                    <div class="cert-benefits">
+                        <span class="benefit-tag">5 Weeks Duration</span>
+                        <span class="benefit-tag">Intermediate Level</span>
+                        <span class="benefit-tag">Exam Prep</span>
+                    </div>
+                    <div class="cert-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">28K+</span>
+                            <span class="stat-name">Certified</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">96%</span>
+                            <span class="stat-name">Satisfaction</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline" style="width: 100%; margin-top: 20px;">Learn More →</button>
+                </div>
+
+                <!-- AWS Solutions Architect -->
+                <div class="cert-card lift-on-hover">
+                    <div class="cert-logo-container" style="background: linear-gradient(135deg, #f97316, #fb923c);">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="white">
+                            <path d="M25 35c-3 -2 -5 -5 -5 -9 0 -6 4 -10 10 -10 6 0 10 4 10 10 0 4 -2 7 -5 9" />
+                        </svg>
+                    </div>
+                    <h3>AWS Solutions Architect</h3>
+                    <p class="cert-description">Expert-level certification for designing distributed systems on AWS
+                        infrastructure.</p>
+                    <div class="cert-benefits">
+                        <span class="benefit-tag">8 Weeks Duration</span>
+                        <span class="benefit-tag">Advanced Level</span>
+                        <span class="benefit-tag">Case Studies</span>
+                    </div>
+                    <div class="cert-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">35K+</span>
+                            <span class="stat-name">Certified</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">97%</span>
+                            <span class="stat-name">Satisfaction</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline" style="width: 100%; margin-top: 20px;">Learn More →</button>
+                </div>
+
+                <!-- Cisco Cybersecurity -->
+                <div class="cert-card lift-on-hover">
+                    <div class="cert-logo-container" style="background: linear-gradient(135deg, #ef4444, #f87171);">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="white">
+                            <path d="M30 20L20 26v10l10 6 10 -6v-10z M30 28l-5 3v4l5 3 5 -3v-4z" />
+                        </svg>
+                    </div>
+                    <h3>Cisco Cybersecurity Essentials</h3>
+                    <p class="cert-description">Industry-leading certification for network security and threat
+                        mitigation.</p>
+                    <div class="cert-benefits">
+                        <span class="benefit-tag">6 Weeks Duration</span>
+                        <span class="benefit-tag">Advanced Level</span>
+                        <span class="benefit-tag">Lab Access</span>
+                    </div>
+                    <div class="cert-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">18K+</span>
+                            <span class="stat-name">Certified</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">99%</span>
+                            <span class="stat-name">Satisfaction</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline" style="width: 100%; margin-top: 20px;">Learn More →</button>
+                </div>
+
+                <!-- Google Cloud Platform -->
+                <div class="cert-card lift-on-hover">
+                    <div class="cert-logo-container" style="background: linear-gradient(135deg, #10b981, #34d399);">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="white">
+                            <path d="M30 18c-8 0 -14 6 -14 14s6 14 14 14 14 -6 14 -14 -6 -14 -14 -14z" />
+                        </svg>
+                    </div>
+                    <h3>Google Cloud Platform Associate</h3>
+                    <p class="cert-description">Professional certification for GCP services, infrastructure, and
+                        application deployment.</p>
+                    <div class="cert-benefits">
+                        <span class="benefit-tag">6 Weeks Duration</span>
+                        <span class="benefit-tag">Intermediate Level</span>
+                        <span class="benefit-tag">Exam Included</span>
+                    </div>
+                    <div class="cert-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">22K+</span>
+                            <span class="stat-name">Certified</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">94%</span>
+                            <span class="stat-name">Satisfaction</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline" style="width: 100%; margin-top: 20px;">Learn More →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certification Benefits -->
+    <section
+        style="padding: 80px 20px; background: linear-gradient(135deg, rgba(6, 182, 212, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);">
+        <div class="container">
+            <div class="section-header animate-fade-in-up">
+                <h2>Why Get <span class="accent-text">Certified?</span></h2>
+                <p>Unlock career advancement and professional growth</p>
+            </div>
+
+            <div class="benefits-grid stagger-children"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 50px;">
+                <div class="benefit-card">
+                    <div class="benefit-icon">💼</div>
+                    <h4>Career Advancement</h4>
+                    <p>Stand out to employers and unlock premium job opportunities with recognized credentials.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📈</div>
+                    <h4>Salary Growth</h4>
+                    <p>Certified professionals earn 15-25% more on average compared to non-certified peers.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌍</div>
+                    <h4>Global Recognition</h4>
+                    <p>Industry certifications are recognized worldwide, enabling international career opportunities.
+                    </p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚀</div>
+                    <h4>Skill Validation</h4>
+                    <p>Demonstrate expertise and validate your technical knowledge to employers and clients.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🤝</div>
+                    <h4>Professional Network</h4>
+                    <p>Join communities of certified professionals and build valuable industry connections.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📚</div>
+                    <h4>Continuous Learning</h4>
+                    <p>Maintain certifications through continuous education and stay updated with industry trends.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section"
+        style="padding: 80px 20px; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; text-align: center;">
+        <div class="container animate-fade-in-up">
+            <h2>Start Your Certification Journey Today</h2>
+            <p style="font-size: 18px; margin: 20px 0; opacity: 0.9;">Choose from 50+ certifications and boost your
+                career</p>
+            <button class="btn"
+                style="background: white; color: var(--primary-color); font-weight: 600; padding: 12px 40px; font-size: 16px;"
+                onclick="scrollToTop()">Explore Certifications</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3 class="footer-title">BuildX</h3>
+                <p class="footer-desc">Empowering professionals with industry-recognized certifications.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="certifications.html">Certifications</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" class="social-icon">f</a>
+                    <a href="#" class="social-icon">i</a>
+                    <a href="#" class="social-icon">l</a>
+                    <a href="#" class="social-icon">w</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BuildX Tech Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

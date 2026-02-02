@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="BuildX Tech Solutions - Empowering the next generation of tech leaders with skill-based training and real-world projects.">
+    <title>BuildX - Empowering Business with Core Technology</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">Build<span class="logo-x">X</span></span>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span class="hamburger"></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="courses.html" class="nav-link">Courses</a></li>
+                <li><a href="certifications.html" class="nav-link">Certifications</a></li>
+                <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                <li><a href="placements.html" class="nav-link">Placements</a></li>
+            </ul>
+            <button class="enroll-btn" onclick="openEnrollModal()">Enroll Now</button>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero"
+        style="background-image: url('images/hero-bg.jpg'); background-size: cover; background-position: center;">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="badge">5 Services • Internship • Training</div>
+            <h1 class="hero-title">Empowering Business with <span class="accent-text">Core Technology</span></h1>
+            <p class="hero-description">From custom software dev to integration, we deliver enterprise-grade solutions
+                and train the next generation of tech leaders.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary"
+                    onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})">Explore
+                    Services</button>
+                <button class="btn btn-secondary"
+                    onclick="document.getElementById('internships').scrollIntoView({behavior: 'smooth'})">Internships</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Core Technology Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #3b82f6, #0ea5e9);">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M12 8h16v24H12z" fill="white" />
+                            <path d="M20 28h-1v2h1v-2z" fill="white" />
+                        </svg>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Custom web applications using MERN Stack (MongoDB, Express, React, Node). Build real e-commerce
+                        and social apps.</p>
+                </div>
+                <div class="service-card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #a855f7, #d946ef);">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="12" fill="white" />
+                            <circle cx="20" cy="20" r="6" fill="#a855f7" />
+                        </svg>
+                    </div>
+                    <h3>Android App Dev</h3>
+                    <p>Native Android apps with Kotlin or Cross-platform frameworks. App Store Optimization, UAIO, and
+                        Google Play deployment.</p>
+                </div>
+                <div class="service-card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #10b981, #14b8a6);">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M10 15h20v10H10z" fill="white" />
+                            <path d="M14 12h2v3h-2z M24 12h2v3h-2z" fill="white" />
+                        </svg>
+                    </div>
+                    <h3>SEO & Digital Marketing</h3>
+                    <p>Technical SEO Audits. Local SEO & Google Business Profile optimization to drive visibility and
+                        traffic.</p>
+                </div>
+                <div class="service-card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #f97316, #f59e0b);">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M12 18h16v4H12z M14 14h2v12h-2z M26 14h2v12h-2z" fill="white" />
+                        </svg>
+                    </div>
+                    <h3>AI & Machine Learning</h3>
+                    <p>Predictive Analytics, Neural Networks, NLP. Build, train, and deploy production-ready ML models.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #3b82f6, #6366f1);">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M15 12h10v8H15z M12 20h16v2H12z" fill="white" />
+                        </svg>
+                    </div>
+                    <h3>Cloud Solutions</h3>
+                    <p>AWS, Azure Migration. Server Management, Cloud Security, and deployment optimization.</p>
+                </div>
+                <div class="service-card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #ef4444, #f43f5e);">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M18 10h4v8h-4z M10 20h20v2H10z M18 24h4v6h-4z" fill="white" />
+                        </svg>
+                    </div>
+                    <h3>Cybersecurity</h3>
+                    <p>Penetration Testing, Network Security, Vulnerability Scanning. Ensure enterprise-grade
+                        protection.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Internships Section -->
+    <section id="internships" class="internships">
+        <div class="container">
+            <h2>Internship Programs</h2>
+            <p class="section-subtitle">Gain real-world experience with our skill-based training and live project
+                experience.</p>
+            <div class="internships-grid">
+                <div class="internship-card" style="border-color: #06b6d4;">
+                    <h3>Web Development Internship</h3>
+                    <p class="internship-duration">Full Stack MERN Stack</p>
+                    <p>Learn frontend, backend, database design. Build real e-commerce and social apps.</p>
+                    <button class="btn btn-outline" onclick="openEnrollModal()">Apply Now</button>
+                </div>
+                <div class="internship-card" style="border-color: #a855f7;">
+                    <h3>Android App Internship</h3>
+                    <p class="internship-duration">Kotlin / Flutter</p>
+                    <p>Build native Android apps. App Store Optimization, UAIO, and publishing on Google Play.</p>
+                    <button class="btn btn-outline" onclick="openEnrollModal()">Apply Now</button>
+                </div>
+                <div class="internship-card" style="border-color: #10b981;">
+                    <h3>AI & ML Internship</h3>
+                    <p class="internship-duration">Python / TensorFlow</p>
+                    <p>Deep learning, Neural Networks, NLP. Create AI models that solve real problems.</p>
+                    <button class="btn btn-outline" onclick="openEnrollModal()">Apply Now</button>
+                </div>
+                <div class="internship-card" style="border-color: #f97316;">
+                    <h3>Cybersecurity Internship</h3>
+                    <p class="internship-duration">Ethical Hacking / Pentesting</p>
+                    <p>Learn network security, penetration testing. Build expertise in securing enterprise systems.</p>
+                    <button class="btn btn-outline" onclick="openEnrollModal()">Apply Now</button>
+                </div>
+                <div class="internship-card" style="border-color: #06b6d4;">
+                    <h3>Cloud & DevOps</h3>
+                    <p class="internship-duration">AWS / Azure / Docker</p>
+                    <p>Deploy and manage cloud infrastructure. Master CI/CD pipelines and containerization.</p>
+                    <button class="btn btn-outline" onclick="openEnrollModal()">Apply Now</button>
+                </div>
+                <div class="internship-card" style="border-color: #ec4899;">
+                    <h3>Full Stack Internship</h3>
+                    <p class="internship-duration">Frontend + Backend</p>
+                    <p>Complete end-to-end training. From React to Node.js and database design.</p>
+                    <button class="btn btn-outline" onclick="openEnrollModal()">Apply Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses">
+        <div class="container">
+            <h2>Explore Our Programs</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <img src="images/course-web-dev.jpg" alt="Web Development course" class="course-image">
+                    <div class="course-header" style="background: linear-gradient(135deg, #3b82f6, #0ea5e9);">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="white">
+                            <path d="M15 18h20v4H15z M15 24h20v4H15z M15 30h20v4H15z" />
+                        </svg>
+                    </div>
+                    <div class="course-info">
+                        <span class="course-duration">6 Months</span>
+                        <span class="course-level">Beginner</span>
+                        <h3>Full Stack Web Development</h3>
+                        <p>Master MERN Stack (MongoDB, Express, React, Node). Build real e-commerce and social apps.</p>
+                        <button class="btn btn-outline" onclick="openEnrollModal()">Enroll Now</button>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="images/course-ai-ml.jpg" alt="AI and Machine Learning course" class="course-image">
+                    <div class="course-header" style="background: linear-gradient(135deg, #a855f7, #d946ef);">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="white">
+                            <circle cx="25" cy="25" r="12" fill="white" />
+                            <circle cx="25" cy="25" r="6" fill="#a855f7" />
+                        </svg>
+                    </div>
+                    <div class="course-info">
+                        <span class="course-duration">4 Months</span>
+                        <span class="course-level">Advanced</span>
+                        <h3>AI & Machine Learning</h3>
+                        <p>Deep learning, Neural Networks, and Python. Create AI models that solve real problems.</p>
+                        <button class="btn btn-outline" onclick="openEnrollModal()">Enroll Now</button>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="images/course-mobile.jpg" alt="Mobile App Development course" class="course-image">
+                    <div class="course-header" style="background: linear-gradient(135deg, #10b981, #14b8a6);">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="white">
+                            <path d="M18 15h14v20H18z M20 12h2v3h-2z M28 12h2v3h-2z" />
+                        </svg>
+                    </div>
+                    <div class="course-info">
+                        <span class="course-duration">3 Months</span>
+                        <span class="course-level">Intermediate</span>
+                        <h3>Mobile App Development</h3>
+                        <p>Build native Android apps with Kotlin or Cross-platform frameworks. Master App Store
+                            deployment.</p>
+                        <button class="btn btn-outline" onclick="openEnrollModal()">Enroll Now</button>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="images/course-cloud.jpg" alt="Cloud Computing course" class="course-image">
+                    <div class="course-header" style="background: linear-gradient(135deg, #f97316, #f59e0b);">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="white">
+                            <path d="M18 20h14v10H18z M15 32h4v3h-4z M31 32h4v3h-4z" />
+                        </svg>
+                    </div>
+                    <div class="course-info">
+                        <span class="course-duration">2 Months</span>
+                        <span class="course-level">Intermediate</span>
+                        <h3>Cloud Computing (AWS/Azure)</h3>
+                        <p>Deploy scalable applications and master DevOps pipelines. Learn Cloud Security and
+                            optimization.</p>
+                        <button class="btn btn-outline" onclick="openEnrollModal()">Enroll Now</button>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="images/course-cybersecurity.jpg" alt="Cybersecurity course" class="course-image">
+                    <div class="course-header" style="background: linear-gradient(135deg, #ef4444, #f43f5e);">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="white">
+                            <path d="M20 15h10v20H20z M18 10h14v3H18z M22 38h6v2h-6z" />
+                        </svg>
+                    </div>
+                    <div class="course-info">
+                        <span class="course-duration">3 Months</span>
+                        <span class="course-level">Advanced</span>
+                        <h3>Cybersecurity & Hacking</h3>
+                        <p>Ethical Hacking, Penetration Testing, and Network Security. Secure enterprise systems.</p>
+                        <button class="btn btn-outline" onclick="openEnrollModal()">Enroll Now</button>
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="images/course-data-science.jpg" alt="Data Science course" class="course-image">
+                    <div class="course-header" style="background: linear-gradient(135deg, #06b6d4, #0891b2);">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="white">
+                            <path d="M20 18h10v4H20z M20 24h10v4H20z M20 30h10v4H20z" />
+                        </svg>
+                    </div>
+                    <div class="course-info">
+                        <span class="course-duration">3 Months</span>
+                        <span class="course-level">Intermediate</span>
+                        <h3>Data Science</h3>
+                        <p>Analyze big data with Python, Pandas, and visualization tools. Learn PowerBI and advanced
+                            analytics.</p>
+                        <button class="btn btn-outline" onclick="openEnrollModal()">Enroll Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <h2>Global Certifications</h2>
+            <div class="certifications-grid">
+                <div class="cert-card">
+                    <div class="cert-icon">&lt;/&gt;</div>
+                    <h3>JPMorgan</h3>
+                    <p>Software Engineering</p>
+                    <a href="#" class="cert-link">View →</a>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">G</div>
+                    <h3>Google</h3>
+                    <p>Google Analytics</p>
+                    <a href="#" class="cert-link">View →</a>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">◻</div>
+                    <h3>Microsoft</h3>
+                    <p>Azure AI Fundamentals</p>
+                    <a href="#" class="cert-link">View →</a>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">🔒</div>
+                    <h3>TATA</h3>
+                    <p>Cybersecurity Analyst</p>
+                    <a href="#" class="cert-link">View →</a>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">📊</div>
+                    <h3>Deloitte</h3>
+                    <p>Data Analytics</p>
+                    <a href="#" class="cert-link">View →</a>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">☁</div>
+                    <h3>Amazon AWS</h3>
+                    <p>AWS Solutions Architect</p>
+                    <a href="#" class="cert-link">View →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2>Best Investment for Your Career</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Internship</h3>
+                    <div class="price">₹699</div>
+                    <p class="price-desc">Basic Internship Experience</p>
+                    <ul class="features">
+                        <li>✓ 1 Month Duration</li>
+                        <li>✓ Completion Certificate</li>
+                        <li>✓ Self-Paced</li>
+                    </ul>
+                    <button class="btn btn-outline" onclick="openEnrollModal()">Choose Plan</button>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="badge-featured">MOST POPULAR</div>
+                    <h3>Pro Plan</h3>
+                    <div class="price">₹4,000</div>
+                    <p class="price-desc">Projects + Certification</p>
+                    <ul class="features">
+                        <li>✓ Internship Certification</li>
+                        <li>✓ 2 Major Projects</li>
+                        <li>✓ Source Code Included</li>
+                        <li>✓ Mentor Guidance</li>
+                    </ul>
+                    <button class="btn btn-primary" onclick="openEnrollModal()">Start Now</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Pro Plus</h3>
+                    <div class="price">₹15,000</div>
+                    <p class="price-desc">Training & Placement</p>
+                    <ul class="features">
+                        <li>✓ 6 Months Training</li>
+                        <li>✓ Placement Assurance</li>
+                        <li>✓ Resume Building</li>
+                        <li>✓ Mock Interviews</li>
+                    </ul>
+                    <button class="btn btn-outline" onclick="openEnrollModal()">Choose Plan</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>500+</h3>
+                    <p>Successful Projects</p>
+                </div>
+                <div class="stat-card">
+                    <h3>50+</h3>
+                    <p>Enterprise Clients</p>
+                </div>
+                <div class="stat-card">
+                    <h3>90%</h3>
+                    <p>Positive Feedback</p>
+                </div>
+                <div class="stat-card">
+                    <h3>300+</h3>
+                    <p>Web & AI Projects</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Start Your Journey</h2>
+            <p>Whether you want to build expertise or build real-world projects, we are here.</p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary" onclick="openEnrollModal()">Chat on WhatsApp</button>
+                <button class="btn btn-secondary">Talk to Our Expert</button>
+                <button class="btn btn-secondary" onclick="openEnrollModal()">Apply for Internship</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section class="approach">
+        <div class="container">
+            <h2>Our Approach</h2>
+            <p>From concept to deployment, we follow a structured path to success.</p>
+            <div class="approach-grid">
+                <div class="approach-card">
+                    <div class="approach-icon">🔍</div>
+                    <h3>Discovery</h3>
+                    <p>We analyze your requirements and create a solid foundation.</p>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon">📋</div>
+                    <h3>Planning</h3>
+                    <p>Creating detailed project roadmap and implementation strategy.</p>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon">💻</div>
+                    <h3>Development</h3>
+                    <p>Agile development with regular updates and quality assurance.</p>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon">✅</div>
+                    <h3>Testing</h3>
+                    <p>Rigorous testing for security and performance optimization.</p>
+                </div>
+                <div class="approach-card">
+                    <div class="approach-icon">🚀</div>
+                    <h3>Launch</h3>
+                    <p>Seamless deployment and continuous support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Build<span class="logo-x">X</span></h3>
+                    <p>Empowering the next generation of tech leaders with skill-based training and real-world projects.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Stay Connected</h4>
+                    <p>Follow us for the latest tech updates.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">f</a>
+                        <a href="#" class="social-icon">i</a>
+                        <a href="#" class="social-icon">L</a>
+                        <a href="#" class="social-icon">W</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BuildX Tech Solutions. All rights reserved.</p>
+                <p>Designed & Developed by BuildX Tech</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enrollment Modal -->
+    <div class="modal" id="enrollModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Student Enrollment</h2>
+                <button class="modal-close" onclick="closeEnrollModal()">&times;</button>
+            </div>
+            <form class="enrollment-form" id="enrollmentForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" placeholder="John Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="john@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="+91 xxxxx xxxxx" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="education">Education / Degree</label>
+                    <select id="education" required>
+                        <option value="">Select Education Level</option>
+                        <option value="12">12th Pass</option>
+                        <option value="diploma">Diploma</option>
+                        <option value="bachelors">Bachelor's Degree</option>
+                        <option value="masters">Master's Degree</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <input type="text" id="department" placeholder="e.g. Computer Science" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="yearOfStudy">Year of Study</label>
+                    <select id="yearOfStudy" required>
+                        <option value="">Select Year</option>
+                        <option value="1st">1st Year</option>
+                        <option value="2nd">2nd Year</option>
+                        <option value="3rd">3rd Year</option>
+                        <option value="4th">4th Year</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="program">Select Program</label>
+                    <select id="program" required>
+                        <option value="">Choose a Program</option>
+                        <option value="web">Full Stack Web Development</option>
+                        <option value="android">Android App Development</option>
+                        <option value="ai">AI & Machine Learning</option>
+                        <option value="cloud">Cloud Computing</option>
+                        <option value="cyber">Cybersecurity</option>
+                        <option value="data">Data Science</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Next Payment</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - BuildX Tech Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">Build<span class="logo-x">X</span></span>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span class="hamburger"></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="courses.html" class="nav-link">Courses</a></li>
+                <li><a href="certifications.html" class="nav-link">Certifications</a></li>
+                <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                <li><a href="placements.html" class="nav-link">Placements</a></li>
+            </ul>
+            <button class="enroll-btn" onclick="openEnrollModal()">Enroll Now</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="service-hero"
+        style="background-image: url('images/hero-bg.jpg'); background-size: cover; background-position: center;">
+        <div class="hero-overlay"></div>
+        <div class="hero-content animate-fade-in-up">
+            <h1 class="hero-title">Transparent <span class="accent-text">Pricing</span></h1>
+            <p class="hero-description">Choose the perfect plan for your learning journey</p>
+        </div>
+    </section>
+
+    <!-- Pricing Toggle -->
+    <section style="padding: 40px 20px;">
+        <div class="container" style="text-align: center;">
+            <div class="pricing-toggle animate-fade-in"
+                style="display: inline-flex; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 50px; padding: 5px;">
+                <button class="toggle-btn active" onclick="togglePricing('monthly')"
+                    style="padding: 10px 30px; border: none; background: transparent; cursor: pointer; font-weight: 600; color: var(--text-primary);">Monthly</button>
+                <button class="toggle-btn" onclick="togglePricing('annual')"
+                    style="padding: 10px 30px; border: none; background: transparent; cursor: pointer; font-weight: 600; color: var(--text-secondary);">Annual
+                    (Save 20%)</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Plans -->
+    <section class="section" style="padding: 80px 20px;">
+        <div class="container">
+            <div class="pricing-plans stagger-children" id="pricingPlans"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+                <!-- Internship Plan -->
+                <div class="pricing-card animate-scale-in" data-plan="internship">
+                    <div class="plan-header">
+                        <h3>Internship</h3>
+                        <p class="plan-description">Perfect for beginners</p>
+                    </div>
+                    <div class="plan-price">
+                        <span class="currency">₹</span>
+                        <span class="price" data-monthly="699" data-annual="6990">699</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <div class="plan-duration">1 Month Duration</div>
+                    <ul class="plan-features">
+                        <li>✓ Completion Certificate</li>
+                        <li>✓ Self-Paced Learning</li>
+                        <li>✓ Module Content Access</li>
+                        <li>✓ Email Support</li>
+                        <li>✗ Mentorship</li>
+                        <li>✗ Job Assistance</li>
+                        <li>✗ Interview Prep</li>
+                    </ul>
+                    <button class="btn btn-outline" style="width: 100%; margin-top: 20px;">Choose Plan</button>
+                </div>
+
+                <!-- Pro Plan (Most Popular) -->
+                <div class="pricing-card animate-bounce-in featured">
+                    <div class="popular-badge">MOST POPULAR</div>
+                    <div class="plan-header">
+                        <h3>Pro</h3>
+                        <p class="plan-description">For career growth</p>
+                    </div>
+                    <div class="plan-price">
+                        <span class="currency">₹</span>
+                        <span class="price" data-monthly="4000" data-annual="40000">4000</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <div class="plan-duration">2-6 Months Duration</div>
+                    <ul class="plan-features">
+                        <li>✓ Internship Certification</li>
+                        <li>✓ 2 Major Projects</li>
+                        <li>✓ Source Code Included</li>
+                        <li>✓ Mentor Guidance</li>
+                        <li>✓ 24/7 Support</li>
+                        <li>✗ Job Guarantee</li>
+                        <li>✗ Salary Negotiation</li>
+                    </ul>
+                    <button class="btn btn-primary" style="width: 100%; margin-top: 20px;">Start Now</button>
+                </div>
+
+                <!-- Pro Plus Plan -->
+                <div class="pricing-card animate-scale-in" data-plan="pro-plus">
+                    <div class="plan-header">
+                        <h3>Pro Plus</h3>
+                        <p class="plan-description">For placement focus</p>
+                    </div>
+                    <div class="plan-price">
+                        <span class="currency">₹</span>
+                        <span class="price" data-monthly="15000" data-annual="150000">15000</span>
+                        <span class="period">/month</span>
+                    </div>
+                    <div class="plan-duration">6 Months Training</div>
+                    <ul class="plan-features">
+                        <li>✓ Full Training & Placement</li>
+                        <li>✓ Placement Assurance</li>
+                        <li>✓ Resume Building</li>
+                        <li>✓ Mock Interviews</li>
+                        <li>✓ Job Interviews</li>
+                        <li>✓ Salary Negotiation</li>
+                        <li>✓ Lifetime Support</li>
+                    </ul>
+                    <button class="btn btn-primary" style="width: 100%; margin-top: 20px;">Choose Plan</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plan Comparison Table -->
+    <section
+        style="padding: 80px 20px; background: linear-gradient(135deg, rgba(6, 182, 212, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);">
+        <div class="container">
+            <div class="section-header animate-fade-in-up">
+                <h2>Detailed <span class="accent-text">Comparison</span></h2>
+                <p>See what's included in each plan</p>
+            </div>
+
+            <div class="comparison-table animate-fade-in-up" style="overflow-x: auto; margin-top: 40px;">
+                <table style="width: 100%; border-collapse: collapse; text-align: center;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid var(--border-color);">
+                            <th style="padding: 15px; text-align: left;">Features</th>
+                            <th style="padding: 15px;">Internship</th>
+                            <th
+                                style="padding: 15px; background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);">
+                                Pro</th>
+                            <th style="padding: 15px;">Pro Plus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 15px; text-align: left;">Duration</td>
+                            <td style="padding: 15px;">1 Month</td>
+                            <td
+                                style="padding: 15px; background: linear-gradient(135deg, rgba(6, 182, 212, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);">
+                                2-6 Months</td>
+                            <td style="padding: 15px;">6 Months</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 15px; text-align: left;">Course Access</td>
+                            <td style="padding: 15px;">Lifetime</td>
+                            <td
+                                style="padding: 15px; background: linear-gradient(135deg, rgba(6, 182, 212, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);">
+                                Lifetime</td>
+                            <td style="padding: 15px;">Lifetime</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 15px; text-align: left;">Live Classes</td>
+                            <td style="padding: 15px;">✗</td>
+                            <td
+                                style="padding: 15px; background: linear-gradient(135deg, rgba(6, 182, 212, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);">
+                                ✓ (12+ hours)</td>
+                            <td style="padding: 15px;">✓ (100+ hours)</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 15px; text-align: left;">Projects</td>
+                            <td style="padding: 15px;">1</td>
+                            <td
+                                style="padding: 15px; background: linear-gradient(135deg, rgba(6, 182, 212, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);">
+                                2</td>
+                            <td style="padding: 15px;">5+</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 15px; text-align: left;">Mentor Support</td>
+                            <td style="padding: 15px;">✗</td>
+                            <td
+                                style="padding: 15px; background: linear-gradient(135deg, rgba(6, 182, 212, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);">
+                                ✓ (8 hours)</td>
+                            <td style="padding: 15px;">✓ Unlimited</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 15px; text-align: left;">Interview Prep</td>
+                            <td style="padding: 15px;">✗</td>
+                            <td
+                                style="padding: 15px; background: linear-gradient(135deg, rgba(6, 182, 212, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);">
+                                ✗</td>
+                            <td style="padding: 15px;">✓ (10+ sessions)</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 15px; text-align: left;">Job Assistance</td>
+                            <td style="padding: 15px;">✗</td>
+                            <td
+                                style="padding: 15px; background: linear-gradient(135deg, rgba(6, 182, 212, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);">
+                                ✗</td>
+                            <td style="padding: 15px;">✓ Guaranteed</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--border-color);">
+                            <td style="padding: 15px; text-align: left;">Certification</td>
+                            <td style="padding: 15px;">✓</td>
+                            <td
+                                style="padding: 15px; background: linear-gradient(135deg, rgba(6, 182, 212, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);">
+                                ✓ + Internship</td>
+                            <td style="padding: 15px;">✓ + Job Cert</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section style="padding: 80px 20px;">
+        <div class="container">
+            <div class="section-header animate-fade-in-up">
+                <h2>Frequently Asked <span class="accent-text">Questions</span></h2>
+                <p>Get clarity on our pricing and plans</p>
+            </div>
+
+            <div class="faq-container stagger-children" style="max-width: 700px; margin: 50px auto;">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I upgrade my plan anytime?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer" style="display: none; padding: 15px 0; color: var(--text-secondary);">
+                        Yes, you can upgrade to a higher plan anytime. We'll adjust your billing accordingly and provide
+                        instant access to additional features.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is there a refund policy?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer" style="display: none; padding: 15px 0; color: var(--text-secondary);">
+                        Yes, we offer a 7-day money-back guarantee if you're not satisfied with the course quality. No
+                        questions asked.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you offer corporate discounts?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer" style="display: none; padding: 15px 0; color: var(--text-secondary);">
+                        Absolutely! For bulk enrollment (10+ students), we provide special corporate pricing. Contact
+                        our sales team for details.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What payment methods do you accept?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer" style="display: none; padding: 15px 0; color: var(--text-secondary);">
+                        We accept all major credit cards, UPI, net banking, and installment plans through various
+                        payment partners.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section"
+        style="padding: 80px 20px; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; text-align: center;">
+        <div class="container animate-fade-in-up">
+            <h2>Ready to Invest in Your Future?</h2>
+            <p style="font-size: 18px; margin: 20px 0; opacity: 0.9;">Start learning today with our flexible pricing
+                plans</p>
+            <button class="btn"
+                style="background: white; color: var(--primary-color); font-weight: 600; padding: 12px 40px; font-size: 16px;"
+                onclick="scrollToTop()">Choose Your Plan</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3 class="footer-title">BuildX</h3>
+                <p class="footer-desc">Affordable, flexible training for career transformation.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="certifications.html">Certifications</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" class="social-icon">f</a>
+                    <a href="#" class="social-icon">i</a>
+                    <a href="#" class="social-icon">l</a>
+                    <a href="#" class="social-icon">w</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BuildX Tech Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function togglePricing(type) {
+            const prices = document.querySelectorAll('.price');
+            const buttons = document.querySelectorAll('.toggle-btn');
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            prices.forEach(price => {
+                const newPrice = type === 'annual' ? price.dataset.annual : price.dataset.monthly;
+                price.textContent = newPrice;
+            });
+        }
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function () {
+                const answer = this.nextElementSibling;
+                const toggle = this.querySelector('.faq-toggle');
+
+                if (answer.style.display === 'none') {
+                    answer.style.display = 'block';
+                    toggle.textContent = '-';
+                } else {
+                    answer.style.display = 'none';
+                    toggle.textContent = '+';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

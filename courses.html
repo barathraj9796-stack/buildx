@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - BuildX Tech Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">Build<span class="logo-x">X</span></span>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span class="hamburger"></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="courses.html" class="nav-link">Courses</a></li>
+                <li><a href="certifications.html" class="nav-link">Certifications</a></li>
+                <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                <li><a href="placements.html" class="nav-link">Placements</a></li>
+            </ul>
+            <button class="enroll-btn" onclick="openEnrollModal()">Enroll Now</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="service-hero"
+        style="background-image: url('images/hero-bg.jpg'); background-size: cover; background-position: center;">
+        <div class="hero-overlay"></div>
+        <div class="hero-content animate-fade-in-up">
+            <h1 class="hero-title">Explore Our <span class="accent-text">Courses</span></h1>
+            <p class="hero-description">Industry-leading courses designed to transform your career</p>
+        </div>
+    </section>
+
+    <!-- Filter Section --
+    <section
+        style="padding: 40px 20px; background: linear-gradient(135deg, rgba(6, 182, 212, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);">
+        <div class="container">
+            <div class="filter-container animate-fade-in"
+                style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-bottom: 40px;">
+                <button class="filter-btn active" onclick="filterCourses('all')">All Courses</button>
+                <button class="filter-btn" onclick="filterCourses('beginner')">Beginner</button>
+                <button class="filter-btn" onclick="filterCourses('intermediate')">Intermediate</button>
+                <button class="filter-btn" onclick="filterCourses('advanced')">Advanced</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Grid -->
+    <section class="section" style="padding: 80px 20px;">
+        <div class="container">
+            <div class="courses-grid stagger-children" id="coursesGrid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+                <!-- Course 1 -->
+                <div class="course-card-detailed animate-fade-in-up" data-level="beginner">
+                    <img src="images/course-web-dev.jpg" alt="Web Development" class="course-image">
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span class="duration">6 Months</span>
+                            <span class="level">Beginner</span>
+                        </div>
+                        <h3>Full Stack Web Development</h3>
+                        <p>Master MERN Stack and build production-ready web applications with real projects and industry
+                            mentors.</p>
+                        <div class="course-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Instructor:</span>
+                                <span class="detail-value">Rajesh Kumar</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Students:</span>
+                                <span class="detail-value">2,500+</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Rating:</span>
+                                <span class="detail-value">4.8/5 ⭐</span>
+                            </div>
+                        </div>
+                        <div class="modules">
+                            <h4>Modules Covered:</h4>
+                            <ul>
+                                <li>HTML5, CSS3, JavaScript Fundamentals</li>
+                                <li>React.js & Redux State Management</li>
+                                <li>Node.js & Express Backend</li>
+                                <li>MongoDB Database Design</li>
+                                <li>REST APIs & Authentication</li>
+                                <li>Deployment & DevOps Basics</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%; margin-top: 20px;"
+                            onclick="alert('Enrollment opened in modal')">Enroll Now</button>
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="course-card-detailed animate-fade-in-up" data-level="advanced">
+                    <img src="images/course-ai-ml.jpg" alt="AI & Machine Learning" class="course-image">
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span class="duration">4 Months</span>
+                            <span class="level">Advanced</span>
+                        </div>
+                        <h3>AI & Machine Learning</h3>
+                        <p>Deep dive into machine learning, neural networks, and build AI models that solve real-world
+                            problems.</p>
+                        <div class="course-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Instructor:</span>
+                                <span class="detail-value">Dr. Priya Sharma</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Students:</span>
+                                <span class="detail-value">1,200+</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Rating:</span>
+                                <span class="detail-value">4.9/5 ⭐</span>
+                            </div>
+                        </div>
+                        <div class="modules">
+                            <h4>Modules Covered:</h4>
+                            <ul>
+                                <li>Python for Data Science</li>
+                                <li>Statistics & Linear Algebra</li>
+                                <li>Supervised & Unsupervised Learning</li>
+                                <li>Deep Learning & Neural Networks</li>
+                                <li>NLP & Computer Vision</li>
+                                <li>Model Deployment & MLOps</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%; margin-top: 20px;"
+                            onclick="alert('Enrollment opened in modal')">Enroll Now</button>
+                    </div>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="course-card-detailed animate-fade-in-up" data-level="intermediate">
+                    <img src="images/course-mobile.jpg" alt="Mobile App Development" class="course-image">
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span class="duration">3 Months</span>
+                            <span class="level">Intermediate</span>
+                        </div>
+                        <h3>Mobile App Development</h3>
+                        <p>Build native Android and iOS apps with modern frameworks and publish them on app stores.</p>
+                        <div class="course-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Instructor:</span>
+                                <span class="detail-value">Arjun Patel</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Students:</span>
+                                <span class="detail-value">1,800+</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Rating:</span>
+                                <span class="detail-value">4.7/5 ⭐</span>
+                            </div>
+                        </div>
+                        <div class="modules">
+                            <h4>Modules Covered:</h4>
+                            <ul>
+                                <li>Android Development with Kotlin</li>
+                                <li>iOS Development with Swift</li>
+                                <li>React Native & Flutter</li>
+                                <li>UI/UX Design Principles</li>
+                                <li>API Integration & Databases</li>
+                                <li>App Publishing & Monetization</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%; margin-top: 20px;"
+                            onclick="alert('Enrollment opened in modal')">Enroll Now</button>
+                    </div>
+                </div>
+
+                <!-- Course 4 -->
+                <div class="course-card-detailed animate-fade-in-up" data-level="intermediate">
+                    <img src="images/course-cloud.jpg" alt="Cloud Computing" class="course-image">
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span class="duration">2 Months</span>
+                            <span class="level">Intermediate</span>
+                        </div>
+                        <h3>Cloud Computing (AWS/Azure)</h3>
+                        <p>Master cloud infrastructure, deployment, and DevOps. Learn AWS and Azure certifications.</p>
+                        <div class="course-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Instructor:</span>
+                                <span class="detail-value">Vikram Singh</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Students:</span>
+                                <span class="detail-value">3,100+</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Rating:</span>
+                                <span class="detail-value">4.8/5 ⭐</span>
+                            </div>
+                        </div>
+                        <div class="modules">
+                            <h4>Modules Covered:</h4>
+                            <ul>
+                                <li>AWS EC2, S3, RDS Services</li>
+                                <li>Azure Virtual Machines & Storage</li>
+                                <li>Docker & Kubernetes</li>
+                                <li>CI/CD Pipelines</li>
+                                <li>Cloud Security & Compliance</li>
+                                <li>AWS & Azure Certifications Prep</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%; margin-top: 20px;"
+                            onclick="alert('Enrollment opened in modal')">Enroll Now</button>
+                    </div>
+                </div>
+
+                <!-- Course 5 -->
+                <div class="course-card-detailed animate-fade-in-up" data-level="advanced">
+                    <img src="images/course-cybersecurity.jpg" alt="Cybersecurity" class="course-image">
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span class="duration">3 Months</span>
+                            <span class="level">Advanced</span>
+                        </div>
+                        <h3>Cybersecurity & Ethical Hacking</h3>
+                        <p>Learn penetration testing, vulnerability assessment, and secure enterprise systems.</p>
+                        <div class="course-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Instructor:</span>
+                                <span class="detail-value">Harsh Verma</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Students:</span>
+                                <span class="detail-value">900+</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Rating:</span>
+                                <span class="detail-value">4.9/5 ⭐</span>
+                            </div>
+                        </div>
+                        <div class="modules">
+                            <h4>Modules Covered:</h4>
+                            <ul>
+                                <li>Network Security Fundamentals</li>
+                                <li>Penetration Testing Tools</li>
+                                <li>Vulnerability Assessment</li>
+                                <li>Social Engineering & OSINT</li>
+                                <li>Web Application Security</li>
+                                <li>CEH & OSCP Certification Prep</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%; margin-top: 20px;"
+                            onclick="alert('Enrollment opened in modal')">Enroll Now</button>
+                    </div>
+                </div>
+
+                <!-- Course 6 -->
+                <div class="course-card-detailed animate-fade-in-up" data-level="intermediate">
+                    <img src="images/course-data-science.jpg" alt="Data Science" class="course-image">
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span class="duration">3 Months</span>
+                            <span class="level">Intermediate</span>
+                        </div>
+                        <h3>Data Science & Analytics</h3>
+                        <p>Master data analysis, visualization, and statistical modeling with Python and R.</p>
+                        <div class="course-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Instructor:</span>
+                                <span class="detail-value">Sneha Gupta</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Students:</span>
+                                <span class="detail-value">2,000+</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Rating:</span>
+                                <span class="detail-value">4.8/5 ⭐</span>
+                            </div>
+                        </div>
+                        <div class="modules">
+                            <h4>Modules Covered:</h4>
+                            <ul>
+                                <li>Python & R Programming</li>
+                                <li>Data Cleaning & Preprocessing</li>
+                                <li>Statistical Analysis</li>
+                                <li>Data Visualization (Tableau, PowerBI)</li>
+                                <li>Predictive Modeling</li>
+                                <li>Big Data with Apache Spark</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%; margin-top: 20px;"
+                            onclick="alert('Enrollment opened in modal')">Enroll Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free External Certifications Section
+    <section class="section"
+        style="padding: 80px 20px; background: linear-gradient(135deg, rgba(6, 182, 212, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);">
+        <div class="container">
+            <div class="section-header animate-fade-in-up">
+                <h2>Free External <span class="accent-text">Certifications</span></h2>
+                <p>Top free courses from global tech leaders to boost your resume</p>
+            </div>
+            <div class="
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3 class="footer-title">BuildX</h3>
+                <p class="footer-desc">Transform your career with industry-leading courses.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="certifications.html">Certifications</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" class="social-icon">f</a>
+                    <a href="#" class="social-icon">i</a>
+                    <a href="#" class="social-icon">l</a>
+                    <a href="#" class="social-icon">w</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BuildX Tech Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function filterCourses(level) {
+            const courses = document.querySelectorAll('.course-card-detailed');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            courses.forEach(course => {
+                if (level === 'all' || course.dataset.level === level) {
+                    course.style.display = 'block';
+                    setTimeout(() => course.classList.add('animate-fade-in-up'), 10);
+                } else {
+                    course.style.display = 'none';
+                }
+            });
+        }
+
+        // Counter animation
+        function animateCounters() {
+            document.querySelectorAll('.stat-number').forEach(counter => {
+                const target = parseInt(counter.dataset.target);
+                let count = 0;
+                const increment = target / 50;
+                const interval = setInterval(() => {
+                    count += increment;
+                    if (count >= target) {
+                        counter.textContent = target + (counter.dataset.target > 100 ? '' : '%');
+                        clearInterval(interval);
+                    } else {
+                        counter.textContent = Math.ceil(count);
+                    }
+                }, 30);
+            });
+        }
+
+        // Intersection Observer for counter animation
+        const statsSection = document.querySelector('.stats-grid').parentElement;
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        observer.observe(statsSection);
+    </script>
+</body>
+
+</html>
